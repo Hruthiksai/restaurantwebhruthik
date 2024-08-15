@@ -42,7 +42,7 @@
 
 video{
     width: 100%;
-    height: auto;
+    height: 500px;
     object-fit: cover;
 }
 
@@ -59,6 +59,7 @@ video{
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
+    margin: 10px 5px;
     
 }
 .both-contain{
@@ -68,18 +69,22 @@ video{
     /* padding: 0px 60px; */
     text-align: center;
     padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .both-contain span{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #3F2537;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border-bottom: 1px dashed #3F2537;
     
 }
 .btn{
     font-size: 0.8rem;
-    margin: 16px 0px;
+    margin: 15px 0px;
     padding: 8px 24px;
     border-radius: 100px;
     color: #512869;
@@ -93,13 +98,13 @@ video{
 }
 img:hover{
     transform: scale(0.75);
-    border-radius: 100px;
+    border-radius: 80px;
 }
 
 .para{
-    line-height: 1.5;
+    line-height: 1.3;
     color: #3F2537;
-    margin-top: 1.2rem;
+    margin-top: 0.8rem;
     /* padding: 10px 60px; */
 
 }
@@ -109,12 +114,12 @@ img:hover{
     /* width: 50%; */
 
     display: flex;
-    justify-content: end;
+    justify-content:center;
     align-items: center;
   
 }
 .both-img img{
-    width: 100%;
+    width: 70%;
     
     height: auto;
     aspect-ratio: 1/1;
@@ -135,7 +140,7 @@ footer p{
 
 
 
-@media (max-width:1000px) {
+@media (max-width:1001px) {
     /* For mobile phones: */
     .img {
         background-image: url(https://res.cloudinary.com/devmclblo/image/upload/v1711478198/logo_hruthik_sai_bg.png);
@@ -155,6 +160,11 @@ footer p{
         /* zoom: 2; */
         /* font-size: 1.5rem; */
         transition: all 1s ease;
+    }
+    video{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
     .both{
         display: grid;
@@ -177,7 +187,7 @@ footer p{
         align-items: center;
     }
     .both-img img {
-        width: 70%;
+        width: 40%;
         height: auto;
         aspect-ratio: 1 / 1;
         object-fit: cover;
@@ -224,7 +234,16 @@ footer p{
         font-weight: bold;
     }
   }
-  @media (max-width: 425px) {
+  @media (max-width: 426px) {
+
+    .both-img img {
+        width: 70%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        transition: all 2s ease-in;
+    }
+
     ul {
         margin: 0px 0px;
         width: 80%;
@@ -245,5 +264,151 @@ footer p{
         /* transition: all 2s ease-in 0.2s; */
         font-weight: bold;
     }
+    video{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 
 }
+
+/* breakfast section */
+
+.card-img-top{
+    height: 100px;
+    width: 165px;
+    border-radius: 5px;
+    /* margin-top: 10px; */
+    /* height: 200px; */
+}
+.card{
+    width: 230px;
+    text-align: center;
+    box-shadow: 5px 5px #dad7cd;
+    border-radius: 20px;
+    margin: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    /* padding: 30px; */
+    /* grid-column: 1 / 3; */
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 0px 5px;
+    height: 150px;
+    /* margin: 5px 0px;
+    /* margin: 5px 0px; */
+}
+
+/* .btn-primary{
+    position: relative;
+    bottom: 10px;
+} */
+#BREAKFAST{
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px; */
+    /* padding: 50px 100px; */
+    display: flex;
+    
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   
+}
+.price{
+    margin-top: 5px;
+}
+/* lunch section */
+#LUNCH{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#lunch1{
+    margin-bottom: 10px;
+}
+#lunch1,#lunch2{
+    display: flex;
+    
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.green{
+    /* color:#588157 ; */
+
+    color: #512869;
+    background-color: #F4F5F0;
+    border-radius: 76px;
+    border: solid 1px #512869;
+    font-size: 1.5rem;
+    /* margin: 16px 0px; */
+    padding: 6px 20px;
+    border-radius: 100px;
+    color: #512869;
+    background-color: #F4F5F0;
+    border-color: #512869;
+}
+
+
+/* dinner section */
+
+#DINNER{
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    
+}
+#dinner1{
+    margin-bottom: 10px;
+}
+#dinner1,#dinner2{
+    display: flex;
+    
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* desserts section */
+
+#DESSERT{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* COCKTAIL */
+
+#COCKTAIL{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .main-video{
+    width: 100vw;
+    height: 95vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
