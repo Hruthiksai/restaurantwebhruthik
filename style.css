@@ -59,6 +59,17 @@ A{
     /* margin: 0px 20%; */
     width: 100%;
     align-items: center;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    width: 100%;
+    align-items: center;
+    position: sticky;
+    top: 60px;
+    background-color: white; */
 }
 .h1{
     font-family: futura PT;

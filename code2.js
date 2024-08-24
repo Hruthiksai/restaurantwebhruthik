@@ -169,6 +169,12 @@ const vegetarian =
         price.appendChild(priceText);
     
         button.textContent = "Add";
+        button.addEventListener('click', function() {
+          cart.push(m); // Add the item to the cart array
+          localStorage.setItem('cart', JSON.stringify(cart));// Store the updated cart in localStorage
+          updateCartCount(); // Update the cart count
+          
+        });
     
         // Append elements to the card
         cardSub.append(description,price,button);
@@ -257,6 +263,12 @@ const vegetarian =
         price.appendChild(priceText);
 
         button.textContent="Add";
+        button.addEventListener('click', function() {
+          cart.push(m); 
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartCount(); 
+          
+        });
 
         cardSub.append(description,price,button);
         divCard.append(name,image,cardSub);
@@ -434,6 +446,12 @@ const vegetarian =
         price.appendChild(priceText);
 
         button.textContent="Add";
+        button.addEventListener('click', function() {
+          cart.push(m); 
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartCount();
+          
+        });
 
         cardSub.append(description,price,button);
         divCard.append(name,image,cardSub);
@@ -481,6 +499,12 @@ const vegetarian =
         price.appendChild(priceText);
         
         button.textContent="Add";
+        button.addEventListener('click', function() {
+          cart.push(m); 
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartCount();
+          
+        });
 
         cardSub.append(description,price,button);
         divCard.append(name,image,cardSub);
@@ -581,8 +605,14 @@ const vegetarian =
     ]
   }
    
-
+      //   cartIcon.addEventListener('click', function() {
+      //     window.location.href = './cart.html'; // Redirect to the cart page
+      // });
   const menu_dessert1 = document.getElementById('DESSERT')
+    const cartCountSpan = document.querySelector('.cart1 .count'); // Select the cart count span
+    // let cart = []; // Initialize an empty array to store cart items
+    let cart = JSON.parse(localStorage.getItem('cart')) || []; // Retrieve cart from localStorage
+    cartCountSpan.textContent = cart.length;
 
   menu_dessert.desserts.forEach(function(m){
         const divCard = document.createElement('div');
@@ -621,12 +651,27 @@ const vegetarian =
         price.appendChild(priceText);
 
         button.textContent="Add";
+          // Event listener for "Add" button
+            button.addEventListener('click', function() {
+              cart.push(m); // Add the item to the cart array
+              localStorage.setItem('cart', JSON.stringify(cart));// Store the updated cart in localStorage
+              updateCartCount(); // Update the cart count
+              
+            });
 
         cardSub.append(description,price,button);
         divCard.append(name,image,cardSub);
         menu_dessert1.appendChild(divCard);
 
     })
+
+    // Function to update cart count
+        function updateCartCount() {
+              if (cart.length > 0) {
+                cartCountSpan.style.visibility = 'visible'; // Make the span visible
+            }
+          cartCountSpan.textContent = cart.length;
+        }
 
 
 // COCKTAIL SECTION
@@ -640,6 +685,7 @@ const vegetarian =
         "description": "A refreshing cocktail made with white rum, sugar, lime juice, soda water, and mint.",
         "image": "https://wallsdesk.com/wp-content/uploads/2017/01/Mojito-HD-Wallpaper.jpg",
         "price": 150
+        
       },
       {
         "name": "Martini",
@@ -738,6 +784,15 @@ const vegetarian =
         price.appendChild(priceText);
 
         button.textContent="Add";
+        // Event listener for "Add" button
+        button.addEventListener('click', function() {
+          cart.push(m); // Add the item to the cart array
+          localStorage.setItem('cart', JSON.stringify(cart));// Store the updated cart in localStorage
+          updateCartCount(); // Update the cart count
+          
+        });
+        
+     
 
         cardSub.append(description,price,button);
         divCard.append(name,image,cardSub);

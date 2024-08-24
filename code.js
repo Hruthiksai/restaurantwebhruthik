@@ -100,7 +100,13 @@ const menu =  [
         const priceText = document.createTextNode(m.price + " Rs\\-");
         price.appendChild(priceText);
 
-        button.textContent="Add";
+        button.textContent="Add"; 
+        button.addEventListener('click', function() {
+          cart.push(m); 
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartCount();
+          
+        });
 
         cardSub.append(description,price,button);
         divCard.append(name,image,cardSub);
@@ -109,4 +115,9 @@ const menu =  [
     })
 
 
-    
+    function updateCartCount() {
+      if (cart.length > 0) {
+        cartCountSpan.style.visibility = 'visible'; // Make the span visible
+    }
+  cartCountSpan.textContent = cart.length;
+}
