@@ -67,7 +67,7 @@
     border-radius: 50%;
     padding: 2px;
     text-align: center;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 video{
     width: 100%;
@@ -261,7 +261,7 @@ footer p{
         font-size: .9rem;
         /* transition: all 2s ease-in 0.2s; */
         font-weight: bold;
-    }
+    }    
   }
   @media (max-width: 426px) {
 
@@ -458,4 +458,9 @@ footer p{
 .cart-header{
     text-align: center;
     margin: 2rem 0px;
+}
+
+.total-amount-container{
+    display: flex;
+    justify-content: end;
 }

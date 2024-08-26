@@ -183,6 +183,7 @@ const vegetarian =
     });
     
     
+    
 
   //   const menu2 = document.getElementById('lunch1')
 
@@ -670,9 +671,10 @@ const vegetarian =
               if (cart.length > 0) {
                 cartCountSpan.style.visibility = 'visible'; // Make the span visible
             }
-          cartCountSpan.textContent = cart.length;
-        }
-
+            cartCountSpan.textContent = cart.length;
+          }
+          
+         if(cart.length==0) cartCountSpan.style.visibility = 'hidden'; // Hide the span if the cart is empty
 
 // COCKTAIL SECTION
 

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartItemsContainer = document.getElementById('cartItems');
     // const cartCountSpan = document.getElementById('cartCount'); // Assuming there's a span with id 'cartCount'
     const cartCountSpan = document.querySelector('.cart1 .count');
+    const totalAmountSpan = document.getElementById('totalAmount');//total-amount
     // Function to update the cart count
     function updateCartCount() {
         if (cart.length > 0) {
@@ -24,7 +25,18 @@ document.addEventListener('DOMContentLoaded', function() {
         if (cart.length === 0) {
             // Display a message if the cart is empty
             cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+            cartCountSpan.textContent=0;
+            cartCountSpan.style.visibility='hidden';
+            totalAmountSpan.textContent = 0.00;
             return;
+        }
+
+        function calculateTotalAmount() {
+            let totalAmount = 0;
+            cart.forEach(item => {
+                totalAmount += parseFloat(item.price); // Assuming the price is stored as a string
+            });
+            totalAmountSpan.textContent = totalAmount.toFixed(2); // Update the total amount in the HTML
         }
 
         // Iterate over the cart items and create the card elements
@@ -79,6 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update the cart count after displaying items
         updateCartCount();
+
+        calculateTotalAmount(); // Calculate and update the total amount after displaying items
     }
 
     // Function to remove an item from the cart
