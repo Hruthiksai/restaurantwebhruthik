@@ -74,6 +74,49 @@ video{
     height: 500px;
     object-fit: cover;
 }
+/* video {
+    width: 100%; 
+    height: auto; 
+} */
+
+video::-webkit-media-controls {
+    display: none !important; /* For WebKit browsers (Chrome, Safari) */
+}
+
+video::-moz-media-controls {
+    display: none !important; /* For Firefox */
+}
+
+/* Additional styles to ensure controls are hidden in various browsers */
+video::-ms-media-controls {
+    display: none !important; /* For Internet Explorer/Edge */
+}
+
+video::controls {
+    display: none !important; /* General controls hiding */
+}
+/* video {
+    width: 100%; 
+    height: auto; 
+} */
+
+video::-webkit-media-controls {
+    display: none !important; /* For WebKit browsers (Chrome, Safari) */
+}
+
+video::-moz-media-controls {
+    display: none !important; /* For Firefox */
+}
+
+/* Additional styles to ensure controls are hidden in various browsers */
+video::-ms-media-controls {
+    display: none !important; /* For Internet Explorer/Edge */
+}
+
+video::controls {
+    display: none !important; /* General controls hiding */
+}
+
 
 /* @media screen and (max-width:1000px) {
     .both{
