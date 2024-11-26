@@ -27,7 +27,7 @@ const vegetarian =
       {
         "name": "Avial",
         "description": "Mixed vegetables cooked in coconut and yogurt-based gravy.",
-        "image": "https://foodgood.in/wp-content/uploads/2019/01/aviyal_2-1280x853.jpg",
+        "image": "https://media.istockphoto.com/id/1338917132/photo/aviyal-is-a-popular-kerala-dish-and-it-is-an-essential-part-of-the-meal.jpg?s=612x612&w=0&k=20&c=3DY-Z7212FXW-EdE1kM0gja9cWnu_Kc4FFqn3fJPvGc=",
         "price": 100
       },
       {
@@ -692,7 +692,7 @@ const vegetarian =
       {
         "name": "Martini",
         "description": "A classic cocktail made with gin and vermouth, garnished with an olive or lemon twist.",
-        "image": "https://besthqwallpapers.com/Uploads/2-1-2020/117670/martini-cocktail-4k-bokeh-glass-with-drink-cocktails.jpg",
+        "image": "https://w0.peakpx.com/wallpaper/231/815/HD-wallpaper-cocktails-red-cocktail-food-black-yellow-lemon-sweet-dessert-fruit-glass-olive-summer-cup-martini.jpg",
         "price": 180
       },
       {
@@ -740,7 +740,7 @@ const vegetarian =
       {
         "name": "Mai Tai",
         "description": "A tropical cocktail made with rum, lime juice, orgeat syrup, and orange liqueur.",
-        "image": "https://cocktailbart.de/wp-content/uploads/2019/05/Mai-Tai-Cocktail.jpg",
+        "image": "https://media.istockphoto.com/id/545372152/photo/homemade-mai-tai-cocktail.jpg?s=612x612&w=0&k=20&c=OOyfCX-_NzrZCT-tDx2icLZ2jrFaB97fLK7CUq2R0dI=",
         "price": 180
       }
     ]
